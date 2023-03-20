@@ -17,7 +17,7 @@ class CreateDomain:
     def create_workload_domain(self):
         #validations
         payload = self.utils.read_input(os.path.abspath(__file__ +'/../')+'/domain_creation_spec.json')
-        validations_url =  'https://'+self.hostname+'/v1/domains/validations/creations'
+        validations_url =  'https://'+self.hostname+'/v1/domains/validations'
         print ('Validating the input....')
         response = self.utils.post_request(payload,validations_url)
         if(response['resultStatus'] != 'SUCCEEDED'):

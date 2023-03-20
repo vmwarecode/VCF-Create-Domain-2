@@ -110,7 +110,7 @@ For NFS
 
     For each VDS
 
-    Port group names and the corresponding transport type. Note that EDGE_INFRA_OVERLAY_UPLINK should not be specified in the input spec.
+    Port group names and the corresponding transport type. Note that EDGE_INFRA_OVERLAY_UPLINK, VREALIZE should not be specified in the input spec.
 
     DVS host Infrastructure traffic resource type
 
@@ -218,7 +218,7 @@ For NFS
 
     Subnet mask
 
-    Virtual IP address which would act as proxy/alias for NSX-T managers
+    Virtual IP address which would act as proxy/alias for NSX managers
 
     Fully-qualified domain name for VIP so that common SSL certificates can be installed across all managers
 

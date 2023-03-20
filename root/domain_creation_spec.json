@@ -72,33 +72,47 @@
             "transportType" : "VMOTION"
           } ]
         } ],
-        "nsxClusterSpec" : {
-          "nsxVClusterSpec" : {
-            "vlanId" : 3,
-            "vdsNameForVxlanConfig" : "SDDC-Dswitch-Private1"
+        "nsxClusterSpec": {
+          "nsxTClusterSpec": {
+            "geneveVlanId": 0
           }
         }
       }
     } ]
   },
-  "nsxVSpec" : {
-    "nsxManagerSpec" : {
-      "name" : "nsx-manager-2",
-      "networkDetailsSpec" : {
-        "ipAddress" : "10.0.0.44",
-        "dnsName" : "nsx-manager-2.sfo01.rainpole.local",
-        "gateway" : "10.0.0.250",
-        "subnetMask" : "255.255.255.0"
+  "nsxTSpec": {
+    "nsxManagerSpecs": [
+      {
+        "name": "nsx-mgr1-nsxt-vi-nfs",
+        "networkDetailsSpec": {
+          "ipAddress": "10.0.0.66",
+          "dnsName": "nsx-mgr1-nsxt-vi-nfs.vrack.vsphere.local",
+          "gateway": "10.0.0.250",
+          "subnetMask": "255.255.255.0"
+        }
+      },
+      {
+        "name": "nsx-mgr2-nsxt-vi-nfs",
+        "networkDetailsSpec": {
+          "ipAddress": "10.0.0.65",
+          "dnsName": "nsx-mgr2-nsxt-vi-nfs.vrack.vsphere.local",
+          "gateway": "10.0.0.250",
+          "subnetMask": "255.255.255.0"
+        }
+      },
+      {
+        "name": "nsx-mgr3-nsxt-vi-nfs",
+        "networkDetailsSpec": {
+          "ipAddress": "10.0.0.64",
+          "dnsName": "nsx-mgr3-nsxt-vi-nfs.vrack.vsphere.local",
+          "gateway": "10.0.0.250",
+          "subnetMask": "255.255.255.0"
+        }
       }
-    },
-    "nsxVControllerSpec" : {
-      "nsxControllerIps" : [ "10.0.0.45", "10.0.0.46", "10.0.0.47" ],
-      "nsxControllerPassword" : "Test123456$%",
-      "nsxControllerGateway" : "10.0.0.250",
-      "nsxControllerSubnetMask" : "255.255.255.0"
-    },
-    "licenseKey" : "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX",
-    "nsxManagerAdminPassword" : "Random0$",
-    "nsxManagerEnablePassword" : "Random0$"
+    ],
+    "vip": "10.0.0.63",
+    "vipFqdn": "vip-nsxt-nsxt-vi-nfs.vrack.vsphere.local",
+    "licenseKey": "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX",
+    "nsxManagerAdminPassword": "Random0$"
   }
 }
